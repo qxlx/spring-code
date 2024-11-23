@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +26,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -54,6 +62,7 @@
   "keyToString": {
     "Application.Main.executor": "Debug",
     "Application.SpringApplication.executor": "Run",
+    "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
     "JUnit.Test1.test2.executor": "Run",
     "JUnit.Test1.test3.executor": "Debug",
     "JUnit.Test1.testBd.executor": "Debug",
@@ -82,7 +91,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringApplication">
+  <component name="RunManager" selected="Application.com.qxlx.beanlifecycle.SpringApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qxlx.springmybatis.Main" />
       <module name="spring-code" />
@@ -102,6 +111,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.qxlx.clactime.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.qxlx.beanlifecycle.SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.beanlifecycle.SpringApplication" />
+      <module name="spring-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qxlx.beanlifecycle.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,23 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.testGetPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-code" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test1" />
-      <option name="METHOD_NAME" value="testGetPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.qxlx.beanlifecycle.SpringApplication" />
         <item itemvalue="Application.SpringApplication" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Test1.test3" />
         <item itemvalue="JUnit.Test1.testBd" />
-        <item itemvalue="JUnit.Test1.testGetPerson" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +191,7 @@
       <updated>1732021854814</updated>
       <workItem from="1732021855732" duration="2380000" />
       <workItem from="1732024296404" duration="11681000" />
-      <workItem from="1732283173903" duration="6874000" />
+      <workItem from="1732283173903" duration="17013000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
