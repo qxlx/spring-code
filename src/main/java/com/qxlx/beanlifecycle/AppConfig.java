@@ -1,5 +1,6 @@
 package com.qxlx.beanlifecycle;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
@@ -11,4 +12,10 @@ import org.springframework.stereotype.Component;
 @Configuration
 @ComponentScan("com.qxlx.beanlifecycle")
 public class AppConfig {
+
+    @Bean
+    public UserService userService(){
+        return new UserService();
+    }
+
 }

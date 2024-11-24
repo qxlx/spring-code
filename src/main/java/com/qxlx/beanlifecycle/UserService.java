@@ -11,16 +11,16 @@ import javax.annotation.PostConstruct;
  * @author qxlx
  * @date 2024/11/23 10:50
  */
-@Service
-public class UserService implements InitializingBean {
+//@Service
+public class UserService {
 
-    @Autowired
-    private UserDao userDao;
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        userDao.saveData();
-    }
+//    @Autowired
+//    private UserDao userDao;
+//
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        userDao.saveData();
+//    }
 
 
 
@@ -29,7 +29,13 @@ public class UserService implements InitializingBean {
 //        userDao.saveData();
 //    }
 
-    private UserService () {
+    public void shutdown() {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        for (StackTraceElement stackTraceElement : stackTrace) {
+            System.out.println(stackTraceElement);
+        }
+
+        System.out.println("shutDown");
     }
 
 

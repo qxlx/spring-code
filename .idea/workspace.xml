@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bean生命周期">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aware/MyAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/MyBeanFactoryPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +67,7 @@
   "keyToString": {
     "Application.Main.executor": "Debug",
     "Application.SpringApplication.executor": "Run",
+    "Application.Test1.executor": "Run",
     "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
     "JUnit.Test1.test2.executor": "Run",
     "JUnit.Test1.test3.executor": "Debug",
@@ -79,7 +85,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -118,6 +124,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.beanfactoryprocessor.Test1" />
+      <module name="spring-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qxlx.beanfactoryprocessor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.qxlx.beanlifecycle.SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qxlx.beanlifecycle.SpringApplication" />
       <module name="spring-code" />
@@ -147,29 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.testBd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.qxlx.application.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.qxlx.application" />
-      <option name="MAIN_CLASS_NAME" value="org.qxlx.application.Test1" />
-      <option name="METHOD_NAME" value="testBd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.qxlx.beanlifecycle.SpringApplication" />
+        <item itemvalue="Application.Test1" />
         <item itemvalue="Application.SpringApplication" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Test1.test3" />
-        <item itemvalue="JUnit.Test1.testBd" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +194,7 @@
       <updated>1732021854814</updated>
       <workItem from="1732021855732" duration="2380000" />
       <workItem from="1732024296404" duration="11681000" />
-      <workItem from="1732283173903" duration="17013000" />
+      <workItem from="1732283173903" duration="33628000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -209,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732288316824</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="spring bean生命周期">
+      <option name="closed" value="true" />
+      <created>1732347187081</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732347187081</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +240,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="spring" />
     <MESSAGE value="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案" />
-    <option name="LAST_COMMIT_MESSAGE" value="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案" />
+    <MESSAGE value="spring bean生命周期" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring bean生命周期" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -249,8 +261,24 @@
           <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
+          <line>515</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((DefaultListableBeanFactory)((AnnotationConfigApplicationContext)this).beanFactory).singletonObjects" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.context.annotation.AnnotationConfigApplicationContext" />
+        <watch expression="((DefaultListableBeanFactory)((AnnotationConfigApplicationContext)this).beanFactory).beanDefinitionMap" language="JAVA" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.context.annotation.AnnotationConfigApplicationContext" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
