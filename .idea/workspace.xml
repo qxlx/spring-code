@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bean生命周期">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aware/MyAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/MyBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/Test1.java" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bean生命周期- 销毁方法">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyApplicationListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyNoAnnotationListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/SpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/UserCloseEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/SpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +70,8 @@
     "Application.SpringApplication.executor": "Run",
     "Application.Test1.executor": "Run",
     "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
+    "Application.com.qxlx.event.SpringApplication.executor": "Run",
+    "JUnit.SpringApplication.testBfpp.executor": "Debug",
     "JUnit.Test1.test2.executor": "Run",
     "JUnit.Test1.test3.executor": "Debug",
     "JUnit.Test1.testBd.executor": "Debug",
@@ -85,7 +88,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,21 +99,11 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qxlx.event" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.com.qxlx.beanlifecycle.SpringApplication">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.springmybatis.Main" />
-      <module name="spring-code" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qxlx.springmybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.com.qxlx.event.SpringApplication">
     <configuration name="SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qxlx.clactime.SpringApplication" />
       <module name="spring-code" />
@@ -150,17 +143,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.qxlx.event.SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.event.SpringApplication" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.qxlx.application.*" />
+          <option name="PATTERN" value="com.qxlx.event.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.qxlx.application" />
-      <option name="MAIN_CLASS_NAME" value="org.qxlx.application.Test1" />
-      <option name="METHOD_NAME" value="test3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringApplication.testBfpp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qxlx.bfpp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qxlx.bfpp" />
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.bfpp.SpringApplication" />
+      <option name="METHOD_NAME" value="testBfpp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.qxlx.event.SpringApplication" />
+        <item itemvalue="JUnit.SpringApplication.testBfpp" />
         <item itemvalue="Application.com.qxlx.beanlifecycle.SpringApplication" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.SpringApplication" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Test1.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +200,11 @@
       <updated>1732021854814</updated>
       <workItem from="1732021855732" duration="2380000" />
       <workItem from="1732024296404" duration="11681000" />
-      <workItem from="1732283173903" duration="33628000" />
+      <workItem from="1732283173903" duration="33659000" />
+      <workItem from="1732537892511" duration="873000" />
+      <workItem from="1732538784742" duration="49000" />
+      <workItem from="1732538840042" duration="82000" />
+      <workItem from="1732538928191" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -220,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732347187081</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spring bean生命周期- 销毁方法">
+      <option name="closed" value="true" />
+      <created>1732458521602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732458521602</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +259,8 @@
     <MESSAGE value="spring" />
     <MESSAGE value="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案" />
     <MESSAGE value="spring bean生命周期" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring bean生命周期" />
+    <MESSAGE value="spring bean生命周期- 销毁方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring bean生命周期- 销毁方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -262,14 +281,14 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/support/AbstractApplicationContext.java</url>
-          <line>515</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/beanlifecycle/UserService.java</url>
           <line>37</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
