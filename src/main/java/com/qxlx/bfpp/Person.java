@@ -1,5 +1,6 @@
 package com.qxlx.bfpp;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,4 +9,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Person {
+
+    @Value("${userId}")
+    private Integer userId;
+
+    @Value("${name}")
+    private String name;
 }

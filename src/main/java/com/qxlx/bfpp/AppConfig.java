@@ -2,6 +2,7 @@ package com.qxlx.bfpp;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author qxlx
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("com.qxlx.bfpp")
+@PropertySource("classpath:app.properties")
 public class AppConfig {
 
 }

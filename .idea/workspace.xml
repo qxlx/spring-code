@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bean生命周期- 销毁方法">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyApplicationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyNoAnnotationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/SpringApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/UserCloseEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring 事件驱动">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/AsyncEventBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/EventBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/ObserverAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/ObserverRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/Subscribe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
     "Application.SpringApplication.executor": "Run",
     "Application.Test1.executor": "Run",
     "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
-    "Application.com.qxlx.event.SpringApplication.executor": "Run",
+    "Application.com.qxlx.event.SpringApplication.executor": "Debug",
     "JUnit.SpringApplication.testBfpp.executor": "Debug",
     "JUnit.Test1.test2.executor": "Run",
     "JUnit.Test1.test3.executor": "Debug",
@@ -88,7 +87,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -204,7 +203,9 @@
       <workItem from="1732537892511" duration="873000" />
       <workItem from="1732538784742" duration="49000" />
       <workItem from="1732538840042" duration="82000" />
-      <workItem from="1732538928191" duration="4783000" />
+      <workItem from="1732538928191" duration="12238000" />
+      <workItem from="1732714736033" duration="8350000" />
+      <workItem from="1732937325137" duration="11213000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -238,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732458521602</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="spring 事件驱动">
+      <option name="closed" value="true" />
+      <created>1732543822957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732543822957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +269,8 @@
     <MESSAGE value="[案例] 基于springaop+threadLocal 记录用户一系列方法执行设计方案" />
     <MESSAGE value="spring bean生命周期" />
     <MESSAGE value="spring bean生命周期- 销毁方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring bean生命周期- 销毁方法" />
+    <MESSAGE value="spring 事件驱动" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring 事件驱动" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -289,6 +299,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java</url>
           <line>17</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/annotation/ConfigurationClassParser.java</url>
+          <line>431</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/event/AppConfig.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
