@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring 事件驱动">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/AsyncEventBus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/EventBus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/ObserverAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/ObserverRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/myeventbus/Subscribe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/TestCglib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/MyBeanFactoryPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/SpringApplictionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +53,7 @@
 }</component>
   <component name="ProjectId" id="2p4OPCZzG1y2FnGCYLfZSH6dkju" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -67,7 +64,9 @@
   "keyToString": {
     "Application.Main.executor": "Debug",
     "Application.SpringApplication.executor": "Run",
+    "Application.SpringApplictionTest.executor": "Debug",
     "Application.Test1.executor": "Run",
+    "Application.TestCglib.executor": "Run",
     "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
     "Application.com.qxlx.event.SpringApplication.executor": "Debug",
     "JUnit.SpringApplication.testBfpp.executor": "Debug",
@@ -102,13 +101,13 @@
       <recent name="com.qxlx.event" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.qxlx.event.SpringApplication">
-    <configuration name="SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.clactime.SpringApplication" />
+  <component name="RunManager" selected="Application.SpringApplictionTest">
+    <configuration name="SpringApplictionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.configuration.SpringApplictionTest" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.clactime.*" />
+          <option name="PATTERN" value="com.qxlx.configuration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.beanfactoryprocessor.Test1" />
+    <configuration name="TestCglib" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.bfpp.TestCglib" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.beanfactoryprocessor.*" />
+          <option name="PATTERN" value="com.qxlx.bfpp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.qxlx.event.SpringApplication" />
+        <item itemvalue="Application.SpringApplictionTest" />
         <item itemvalue="JUnit.SpringApplication.testBfpp" />
+        <item itemvalue="Application.TestCglib" />
+        <item itemvalue="Application.com.qxlx.event.SpringApplication" />
         <item itemvalue="Application.com.qxlx.beanlifecycle.SpringApplication" />
-        <item itemvalue="Application.Test1" />
-        <item itemvalue="Application.SpringApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +204,9 @@
       <workItem from="1732538840042" duration="82000" />
       <workItem from="1732538928191" duration="12238000" />
       <workItem from="1732714736033" duration="8350000" />
-      <workItem from="1732937325137" duration="11213000" />
+      <workItem from="1732937325137" duration="19411000" />
+      <workItem from="1733022641273" duration="9639000" />
+      <workItem from="1733143012285" duration="6734000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -247,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732543822957</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="spring 事件驱动">
+      <option name="closed" value="true" />
+      <created>1732955134097</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732955134097</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,24 +305,28 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/annotation/ConfigurationClassParser.java</url>
-          <line>431</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/event/AppConfig.java</url>
           <line>27</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/event/MyTestEventPubLisher.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/SpringApplication.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.12.RELEASE/spring-beans-5.1.12.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.java</url>
+          <line>134</line>
+          <properties class="org.springframework.beans.factory.config.ConfigurableListableBeanFactory" method="clearMetadataCache">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -330,5 +343,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/spring_code$Test1_testGetPerson.ic" NAME="Test1.testGetPerson Coverage Results" MODIFIED="1732023005263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/spring_code$SpringApplication_testBfpp.ic" NAME="SpringApplication.testBfpp Coverage Results" MODIFIED="1733057331028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.qxlx.bfpp.*</FILTER>
+    </SUITE>
   </component>
 </project>

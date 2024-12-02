@@ -8,4 +8,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class A {
+
+    public void test() {
+        System.out.println("A 创建");
+    }
+
 }
