@@ -4,14 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring 事件驱动">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bfpp/TestCglib.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/MyBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/configuration/SpringApplictionTest.java" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bfpp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/CglibTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/MyAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/TestJdkProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/UserSercice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyAopAspectJPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyEnableAspectjAutoProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/MyBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/SpringAppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/beanfactoryprocessor/A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -62,11 +75,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AopTest.executor": "Debug",
+    "Application.CglibTest.executor": "Run",
     "Application.Main.executor": "Debug",
+    "Application.SpringAppTest.executor": "Debug",
     "Application.SpringApplication.executor": "Run",
     "Application.SpringApplictionTest.executor": "Debug",
+    "Application.Test.executor": "Run",
     "Application.Test1.executor": "Run",
     "Application.TestCglib.executor": "Run",
+    "Application.TestJdkProxy.executor": "Run",
+    "Application.com.qxlx.aopprocessor.Test.executor": "Run",
     "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
     "Application.com.qxlx.event.SpringApplication.executor": "Debug",
     "JUnit.SpringApplication.testBfpp.executor": "Debug",
@@ -101,13 +120,13 @@
       <recent name="com.qxlx.event" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpringApplictionTest">
-    <configuration name="SpringApplictionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.configuration.SpringApplictionTest" />
+  <component name="RunManager" selected="Application.AopTest">
+    <configuration name="AopTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.aop.AopTest" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.configuration.*" />
+          <option name="PATTERN" value="com.qxlx.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCglib" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.bfpp.TestCglib" />
+    <configuration name="CglibTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.aop.CglibTest" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.bfpp.*" />
+          <option name="PATTERN" value="com.qxlx.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +147,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.qxlx.beanlifecycle.SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.beanlifecycle.SpringApplication" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.bpp.Test" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.beanlifecycle.*" />
+          <option name="PATTERN" value="com.qxlx.bpp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,12 +160,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.qxlx.event.SpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.event.SpringApplication" />
+    <configuration name="TestJdkProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.aop.TestJdkProxy" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.event.*" />
+          <option name="PATTERN" value="com.qxlx.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,29 +173,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringApplication.testBfpp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.qxlx.aopprocessor.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qxlx.aopprocessor.Test" />
       <module name="spring-code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qxlx.bfpp.*" />
+          <option name="PATTERN" value="com.qxlx.aopprocessor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.qxlx.bfpp" />
-      <option name="MAIN_CLASS_NAME" value="com.qxlx.bfpp.SpringApplication" />
-      <option name="METHOD_NAME" value="testBfpp" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SpringApplictionTest" />
-        <item itemvalue="JUnit.SpringApplication.testBfpp" />
-        <item itemvalue="Application.TestCglib" />
-        <item itemvalue="Application.com.qxlx.event.SpringApplication" />
-        <item itemvalue="Application.com.qxlx.beanlifecycle.SpringApplication" />
+        <item itemvalue="Application.AopTest" />
+        <item itemvalue="Application.com.qxlx.aopprocessor.Test" />
+        <item itemvalue="Application.CglibTest" />
+        <item itemvalue="Application.TestJdkProxy" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +222,8 @@
       <workItem from="1732714736033" duration="8350000" />
       <workItem from="1732937325137" duration="19411000" />
       <workItem from="1733022641273" duration="9639000" />
-      <workItem from="1733143012285" duration="6734000" />
+      <workItem from="1733143012285" duration="15295000" />
+      <workItem from="1733562515457" duration="14013000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -256,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732955134097</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="spring bfpp">
+      <option name="closed" value="true" />
+      <created>1733149985105</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733149985105</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +304,8 @@
     <MESSAGE value="spring bean生命周期" />
     <MESSAGE value="spring bean生命周期- 销毁方法" />
     <MESSAGE value="spring 事件驱动" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring 事件驱动" />
+    <MESSAGE value="spring bfpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring bfpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -315,25 +341,31 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/support/PostProcessorRegistrationDelegate.java</url>
-          <line>129</line>
-          <option name="timeStamp" value="40" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.12.RELEASE/spring-beans-5.1.12.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableListableBeanFactory.java</url>
-          <line>134</line>
-          <properties class="org.springframework.beans.factory.config.ConfigurableListableBeanFactory" method="clearMetadataCache">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="38" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.12.RELEASE/spring-beans-5.1.12.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
+          <line>426</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/annotation/AspectJAutoProxyRegistrar.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((DefaultListableBeanFactory)((AnnotationConfigApplicationContext)this).beanFactory).singletonObjects" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.context.annotation.AnnotationConfigApplicationContext" />
-        <watch expression="((DefaultListableBeanFactory)((AnnotationConfigApplicationContext)this).beanFactory).beanDefinitionMap" language="JAVA" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.context.annotation.AnnotationConfigApplicationContext" />
+        <watch expression="((DefaultListableBeanFactory)beanFactory).beanDefinitionNames" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory" />
+        <watch expression="((DefaultListableBeanFactory)beanFactory).beanPostProcessors" custom="org.springframework.beans.factory.support.DefaultListableBeanFactory" />
       </configuration>
     </watches-manager>
   </component>
