@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bfpp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/CglibTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/MyAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/TestJdkProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/UserSercice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyAopAspectJPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyEnableAspectjAutoProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/MyBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/SpringAppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/bpp/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CommonStatePersistent.xml" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring bfpp aop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/UserSercice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/UserSercice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +61,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.AopTest.executor": "Debug",
+    "Application.AopTest.executor": "Run",
     "Application.CglibTest.executor": "Run",
     "Application.Main.executor": "Debug",
     "Application.SpringAppTest.executor": "Debug",
@@ -223,7 +209,8 @@
       <workItem from="1732937325137" duration="19411000" />
       <workItem from="1733022641273" duration="9639000" />
       <workItem from="1733143012285" duration="15295000" />
-      <workItem from="1733562515457" duration="14013000" />
+      <workItem from="1733562515457" duration="14721000" />
+      <workItem from="1733748261444" duration="6034000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -281,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733149985105</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="spring bfpp aop">
+      <option name="closed" value="true" />
+      <created>1733648382645</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733648382645</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +300,8 @@
     <MESSAGE value="spring bean生命周期- 销毁方法" />
     <MESSAGE value="spring 事件驱动" />
     <MESSAGE value="spring bfpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring bfpp" />
+    <MESSAGE value="spring bfpp aop" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring bfpp aop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,24 +337,14 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java</url>
           <line>12</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.12.RELEASE/spring-beans-5.1.12.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>426</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.12.RELEASE/spring-context-5.1.12.RELEASE-sources.jar!/org/springframework/context/annotation/AspectJAutoProxyRegistrar.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

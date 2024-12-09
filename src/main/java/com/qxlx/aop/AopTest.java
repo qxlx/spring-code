@@ -10,9 +10,13 @@ public class AopTest {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ioc = new AnnotationConfigApplicationContext(AppConfig.class);
-        UserSercice bean = ioc.getBean(UserSercice.class);
+        IUserService bean = (IUserService) ioc.getBean("userSercice");
         bean.add();
 
+        System.out.println("=============");
+
+//        bean.delete();
+        // 因为bean是一个代理类 直接调用时可以使用的
     }
 
 }

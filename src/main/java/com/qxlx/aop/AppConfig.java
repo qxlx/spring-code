@@ -9,7 +9,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * @date 2024/12/8 15:08
  */
 @Configuration
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+// spring 会把当前的代理对象,存放在threadlocal当中
+@EnableAspectJAutoProxy(exposeProxy = true)//(proxyTargetClass = true)
 @ComponentScan("com.qxlx.aop")
 public class AppConfig {
 
