@@ -12,6 +12,8 @@ public class Test {
         AnnotationConfigApplicationContext ioc = new AnnotationConfigApplicationContext(Config.class);
         UserService userService = (UserService) ioc.getBean("userServiceImpl");
         userService.add();
+
+        userService.delete();
     }
 
 }
