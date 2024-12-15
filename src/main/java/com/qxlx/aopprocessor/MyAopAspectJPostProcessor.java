@@ -1,18 +1,17 @@
 package com.qxlx.aopprocessor;
 
-import org.springframework.aop.MethodBeforeAdvice;
-import org.springframework.aop.Pointcut;
+
 import org.springframework.aop.PointcutAdvisor;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.stereotype.Component;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author qxlx
@@ -34,24 +33,20 @@ public class MyAopAspectJPostProcessor implements BeanPostProcessor, BeanFactory
         // 切入点+额外功能 切面(Advisor)
 //        final Pointcut pointcut = beanFactory.getBean(Pointcut.class);
 //        final MethodBeforeAdvice methodBeforeAdvice = beanFactory.getBean(MethodBeforeAdvice.class);
+        if (PointcutAdvisor.class.isAssignableFrom(bean.getClass())) {
+            return bean;
+        }
 
-        final PointcutAdvisor pointcutAdvisor = beanFactory.getBean(PointcutAdvisor.class);
+        ListableBeanFactory listableBeanFactory =(ListableBeanFactory) beanFactory;
+        String[] beanNamesForType = listableBeanFactory.getBeanNamesForType(PointcutAdvisor.class);
+        List<PointcutAdvisor> pointcutAdvisorList = new ArrayList<>();
 
-        return Proxy.newProxyInstance(MyAopAspectJPostProcessor.class.getClassLoader(), bean.getClass().getInterfaces(), new InvocationHandler() {
-            @Override
-            public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
+        for (String beanNameType : beanNamesForType) {
+            PointcutAdvisor pointcutAdvisor = beanFactory.getBean(beanNameType, PointcutAdvisor.class);
+            pointcutAdvisorList.add(pointcutAdvisor);
+        }
 
-                if (pointcutAdvisor.getPointcut().getClassFilter().matches(bean.getClass())) {
-                    if (pointcutAdvisor.getPointcut().getMethodMatcher().matches(method, bean.getClass())) {
-                        if (pointcutAdvisor.getAdvice() instanceof MethodBeforeAdvice) {
-                            ((MethodBeforeAdvice)pointcutAdvisor.getAdvice()).before(method, objects, bean);
-                        }
-                        return method.invoke(bean, objects);
-                    }
-                }
-                return method.invoke(bean, objects);
-            }
-        });
+        return Proxy.newProxyInstance(MyAopAspectJPostProcessor.class.getClassLoader(), bean.getClass().getInterfaces(),new MyInvocationHandler(pointcutAdvisorList, bean));
     }
 
 }

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring aop">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyMethodBeforeAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyPointCut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyPointCutAdvisor.java" afterDir="false" />
+    <list default="true" id="636868fe-9a02-48b9-8386-a12783526356" name="Changes" comment="spring 手写 AOP">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyAopAspectJPostProcessor1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyInvocationHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aop/AopTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyAopAspectJPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/MyAopAspectJPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qxlx/aopprocessor/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +30,15 @@
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;qxlx&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;qxlx&quot;
+    &quot;author&quot;: &quot;qxlx&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
@@ -64,42 +65,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AopTest.executor": "Debug",
-    "Application.CglibTest.executor": "Run",
-    "Application.Main.executor": "Debug",
-    "Application.SpringAppTest.executor": "Debug",
-    "Application.SpringApplication.executor": "Run",
-    "Application.SpringApplictionTest.executor": "Debug",
-    "Application.Test.executor": "Run",
-    "Application.Test1.executor": "Run",
-    "Application.TestCglib.executor": "Run",
-    "Application.TestJdkProxy.executor": "Run",
-    "Application.com.qxlx.aopprocessor.Test.executor": "Run",
-    "Application.com.qxlx.beanlifecycle.SpringApplication.executor": "Run",
-    "Application.com.qxlx.event.SpringApplication.executor": "Debug",
-    "JUnit.SpringApplication.testBfpp.executor": "Debug",
-    "JUnit.Test1.test2.executor": "Run",
-    "JUnit.Test1.test3.executor": "Debug",
-    "JUnit.Test1.testBd.executor": "Debug",
-    "JUnit.Test1.testGetPerson.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/qxlx/work/source/spring-code/src/main/java/org/qxlx/application",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AopTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.CglibTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SpringAppTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SpringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SpringApplictionTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestCglib.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestJdkProxy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.qxlx.aopprocessor.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.qxlx.beanlifecycle.SpringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.qxlx.event.SpringApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SpringApplication.testBfpp.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Test1.test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test1.test3.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Test1.testBd.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.Test1.testGetPerson.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/qxlx/work/source/spring-code/src/main/java/org/qxlx/application&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/org/qxlx/application" />
@@ -108,10 +109,11 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qxlx.aopprocessor" />
       <recent name="com.qxlx.event" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.qxlx.aopprocessor.Test">
+  <component name="RunManager" selected="Application.AopTest">
     <configuration name="AopTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qxlx.aop.AopTest" />
       <module name="spring-code" />
@@ -179,8 +181,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.qxlx.aopprocessor.Test" />
         <item itemvalue="Application.AopTest" />
+        <item itemvalue="Application.com.qxlx.aopprocessor.Test" />
         <item itemvalue="Application.CglibTest" />
         <item itemvalue="Application.TestJdkProxy" />
         <item itemvalue="Application.Test" />
@@ -216,7 +218,9 @@
       <workItem from="1733143012285" duration="15295000" />
       <workItem from="1733562515457" duration="14721000" />
       <workItem from="1733748261444" duration="18355000" />
-      <workItem from="1734008096058" duration="4838000" />
+      <workItem from="1734008096058" duration="5519000" />
+      <workItem from="1734014090059" duration="38000" />
+      <workItem from="1734182915741" duration="5953000" />
     </task>
     <task id="LOCAL-00001" summary="spring">
       <option name="closed" value="true" />
@@ -290,15 +294,53 @@
       <option name="project" value="LOCAL" />
       <updated>1733754325990</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="spring 手写 AOP">
+      <option name="closed" value="true" />
+      <created>1734013181773</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734013181773</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="89f2461b-68cc-4722-8968-cdea3f362980" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="89f2461b-68cc-4722-8968-cdea3f362980">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -316,7 +358,8 @@
     <MESSAGE value="spring bfpp" />
     <MESSAGE value="spring bfpp aop" />
     <MESSAGE value="spring aop" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring aop" />
+    <MESSAGE value="spring 手写 AOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring 手写 AOP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

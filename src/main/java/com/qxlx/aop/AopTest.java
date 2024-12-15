@@ -13,8 +13,7 @@ public class AopTest {
         IUserService bean = (IUserService) ioc.getBean("userSercice");
         bean.delete();
 
-
-//        bean.delete();
+        //  bean.delete();
         // 因为bean是一个代理类 直接调用时可以使用的
     }
 
